@@ -15,8 +15,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Configuration de lazy.nvim et importation des répertoires `plugins` et `plugins.lsp`
-require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp"} }, {
+
+-- Configuration de lazy.nvim et importation du répertoire `plugins`
+require("lazy").setup({ { import = "plugins" } }, {
   -- vérifie automatiquement les mises à jour des plugins mais sans notifier
   -- lualine va se charger de nous afficher un icône
   checker = {
@@ -30,3 +31,10 @@ require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp"} }, {
     notify = false,
   },
 })
+
+
+
+
+
+
+
